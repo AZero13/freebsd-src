@@ -439,6 +439,7 @@ pushfile(void)
 	pf = (struct parsefile *)ckmalloc(sizeof (struct parsefile));
 	pf->prev = parsefile;
 	pf->fd = -1;
+	pf->buf = NULL;
 	pf->strpush = NULL;
 	pf->basestrpush.prev = NULL;
 	parsefile = pf;
